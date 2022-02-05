@@ -1,0 +1,67 @@
+ /*Main Section, Men's - Women's - Discontinued*/
+
+ .maingrid_container {
+    width:100%;
+    border:2px solid red;
+    display:flex;
+    justify-content:space-around;
+    padding:0.5rem;
+    margin:0.5rem;
+}
+figure.effectbox_container {
+   background: -webkit-linear-gradient(top, rgba(37,141,200,1) 0%, rgba(104,60,19,1) 100%);
+   background:linear-gradient(to bottom, rgba(37,141,200,1) 0%, rgba(104,60,19,1) 100%);
+}
+
+figure.effectbox_container img {
+   -webkit-transition: opacity 0.35s;
+   transition:opacity 0.35s
+}
+
+figure.effectbox_container:hover img {
+   opacity:0.4;
+}
+
+figure.effectbox_container figcaption::after {
+   position:absolute;
+   right:30px;
+   bottom:30px;
+   left:30px;
+   height: -webkit-calc(50% - 30px);
+   height: calc(50% - 30px);
+   border:7px solid #fff;
+   content:'';
+   -webkit-transition: -webkit-transform 0.35s;
+   transition: transform 0.35s;
+   -webkit-transform: translate3d(0,-100%,0);
+   transform: translate3d (0,-100%,0);
+}
+
+figure.effectbox_container:hover figcaption::after {
+   -webkit-transform: translate3d(0,0,0);
+   transform:translate3d(0,0,0);
+}
+
+figure.effectbox_container figcaption {
+   padding:3em;
+   text-align:left;
+}
+
+figure.effectbox_container p {
+   position:absolute;
+   right:60px;
+   bottom:60px;
+   left:60px;
+   opacity:0;
+   -webkit-transform: opacity 0.35s, -webkit-transform 0.35s;
+   transition: opacity 0.35s, transform 0.35s;
+   -webkit-transform: translate3d(0,-100px,0);
+   transform: translate3d(0,-100px,0);
+}
+
+figure.effectbox_container:hover p {
+   opacity:1;
+   -webkit-transform:translate3d(0,0,0);
+   transform:translate3d(0,0,0);
+}
+/*Main Section, Men's - Women's - Discontinued ENDS*/
